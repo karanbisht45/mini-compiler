@@ -39,5 +39,5 @@ class SemanticAnalyzer:
     def semantic_check( ast):
         analyzer = SemanticAnalyzer()
         analyzer.analyze(ast)
-# --------------- Test ----------------
+
 
