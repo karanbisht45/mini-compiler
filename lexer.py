@@ -1,6 +1,5 @@
 import ply.lex as lex
 
-# List of token names
 tokens = [
     'ID', 'NUMBER',
     'PLUS', 'MINUS', 'MULT', 'DIVIDE',
@@ -11,7 +10,6 @@ tokens = [
     'STRING',
 ]
 
-# Reserved words (keywords)
 reserved = {
     'int': 'INT',
     'float': 'FLOAT',
@@ -27,7 +25,6 @@ reserved = {
 # Merge reserved with tokens
 tokens += list(reserved.values())
 
-# Regular expressions for simple tokens
 t_PLUS      = r'\+'
 t_MINUS     = r'-'
 t_MULT      = r'\*'
@@ -70,9 +67,8 @@ def t_newline(t):
     r'\n+'
     t.lexer.lineno += len(t.value)
 
-# Error
 def t_error(t):
     raise SyntaxError(f"Illegal character '{t.value[0]}' at line {t.lexer.lineno}")
 
-# Create the lexer
 lexer = lex.lex()
+
