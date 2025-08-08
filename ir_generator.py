@@ -48,5 +48,5 @@ class IRGenerator:
         for line in self.code:
             print(line)
 
-# ---------------- Test ---------------------
+
 
