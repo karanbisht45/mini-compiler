@@ -82,5 +82,5 @@ def p_error(p):
     else:
         raise SyntaxError("Syntax error at EOF")
 
-# ---------- Build Parser ----------
 parser = yacc.yacc()
+
